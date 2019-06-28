@@ -1,0 +1,14 @@
+{
+    "name": "nanaweb/github-listener-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "Nanaweb\\GithubListenerBundle\\": "" }
+    },
+    "require": {
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "symfony/framework-bundle": "~2.8|^4.0"
+    }
+}
