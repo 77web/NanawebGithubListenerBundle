@@ -1,0 +1,35 @@
+services:
+  nanaweb_github_listener.github_listener.commit_comment:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.commit_comment, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.issues:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.issues, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.issue_comment:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.issue_comment, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.pull_request:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.pull_request, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.pull_request_review:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.pull_request_review, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.pull_request_review_comment:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.pull_request_review_comment, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.push:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.release, method: onGithubWebhook }
+  nanaweb_github_listener.github_listener.release:
+    class: Nanaweb\GithubListenerBundle\Listener\GithubListener
+    tags:
+      - { name: kernel.event_listener, event: github.release, method: onGithubWebhook }
+
+
