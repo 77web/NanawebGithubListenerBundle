@@ -1,0 +1,12 @@
+framework:
+    test: ~
+    secret:          hoge
+    form:            false
+#    csrf_protection: ~
+    default_locale:  ja
+    trusted_hosts:   ~
+    session:
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
