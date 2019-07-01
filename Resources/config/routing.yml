@@ -1,0 +1,3 @@
+nanaweb_github_listener_receive:
+    resource: "@NanawebGithubListenerBundle/Controller/ReceiveController.php"
+    prefix: "/"
