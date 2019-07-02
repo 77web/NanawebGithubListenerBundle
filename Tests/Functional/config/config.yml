@@ -11,3 +11,10 @@ framework:
     http_method_override: true
 
 nanaweb_github_listener: ~
+
+
+services:
+    fake_operation_runner:
+        class: Nanaweb\GithubListenerBundle\Tests\Fake\FakeOperationRunner
+        tags:
+            - { name: nanaweb_github_listener.operation_runner, event: pull_request }
