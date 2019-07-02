@@ -87,7 +87,7 @@ class NanawebGithubListenerExtension extends Extension
                 'method' => 'onGithubWebhook',
             ]);
 
-            $githubListeners[] = $definition;
+            $githubListeners[sprintf('nanaweb_github_listener.event_listener.%s', $eventName)] = $definition;
         }
 
         $container->addDefinitions($githubListeners);
