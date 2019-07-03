@@ -9,9 +9,10 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "symfony/framework-bundle": "~2.8|^4.0",
+        "symfony/framework-bundle": "~4.3",
         "phpunit/phpunit": "^7.5",
         "symfony/test-pack": "^1.0",
-        "symfony/yaml": "^4.3"
+        "symfony/yaml": "^4.3",
+        "symfony/annotations-pack": "^1.0"
     }
 }
