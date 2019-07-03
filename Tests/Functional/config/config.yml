@@ -20,3 +20,8 @@ services:
         class: Nanaweb\GithubListenerBundle\Tests\Fake\FakeOperationRunner
         tags:
             - { name: nanaweb_github_listener.operation_runner, event: pull_request }
+    Nanaweb\GithubListenerBundle\Controller\ReceiveController:
+        class: Nanaweb\GithubListenerBundle\Controller\ReceiveController
+        arguments:
+            - "@event_dispatcher"
+        public: true
