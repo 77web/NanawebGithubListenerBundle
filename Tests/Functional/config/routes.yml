@@ -1,0 +1,2 @@
+nanaweb_github_listener:
+    resource: "@NanawebGithubListenerBundle/Resources/config/routing.yml"

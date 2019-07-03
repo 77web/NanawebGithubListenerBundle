@@ -9,6 +9,8 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    router:
+        resource: "%kernel.root_dir%/config/routes.yml"
 
 nanaweb_github_listener: ~
 
