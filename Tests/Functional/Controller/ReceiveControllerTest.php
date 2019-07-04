@@ -14,7 +14,8 @@ class ReceiveControllerTest extends KernelTestCase
         static::bootKernel();
         $client = self::$container->get('test.client');
         $client->getContainer()->get('event_dispatcher')->addListener('github.foo', function(GithubEvent $event){
-            return $event->getEventName() === 'github.foo' && $event->getPalyload() == ['test' => true];
+            $this->assertEquals('github.foo', $event->getEventName());
+            $this->assertEquals(['test' => true], $event->getPalyload());
         });
         $client->request('POST', '/github-listener/receive', [], [], [
             'HTTP_X_GITHUB_EVENT' => 'foo',
