@@ -14,7 +14,7 @@ class GithubEvent
     /**
      * @var array
      */
-    private $palyload;
+    private $payload;
 
     /**
      * @param string $eventName
@@ -23,7 +23,7 @@ class GithubEvent
     public function __construct(string $eventName, array $palyload)
     {
         $this->eventName = $eventName;
-        $this->palyload = $palyload;
+        $this->payload = $palyload;
     }
 
     /**
@@ -37,8 +37,8 @@ class GithubEvent
     /**
      * @return array
      */
-    public function getPalyload(): array
+    public function getPayload(): array
     {
-        return $this->palyload;
+        return $this->payload;
     }
 }
