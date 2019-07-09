@@ -1,1 +1,5 @@
 services:
+  Nanaweb\GithubListenerBundle\Security\Guard\GithubWebhookAuthenticator:
+    class: Nanaweb\GithubListenerBundle\Security\Guard\GithubWebhookAuthenticator
+    arguments:
+      - "%env(resolve:MY_GITHUB_WEBHOOK_SECRET)%"
