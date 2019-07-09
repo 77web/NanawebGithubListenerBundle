@@ -24,3 +24,35 @@ services:
         tags:
             - { name: nanaweb_github_listener.operation_runner, event: pull_request }
 ```
+
+## How to secure your webhook
+
+Configure your guard security setting with `Nanaweb\GithubListenerBundle\Security\Guard\GithubWebhookAuthenticator` :
+```
+# config/packages/security.yaml
+security:
+    # ...
+
+    firewalls:
+        # ...
+
+        main:
+            anonymous: ~
+            logout: ~
+
+            guard:
+                authenticators:
+                    - Nanaweb\GithubListenerBundle\Security\Guard\GithubWebhookAuthenticator
+```
+
+And don't forget to add access_control configuration for  ReceiveController:
+```
+# config/packages/security.yaml
+security:
+    # ...
+
+    access_control:
+        - { path: ^/nanaweb-github-listener/receive, roles: ROLE_GITHUB_WEBHOOK }
+
+
+```
